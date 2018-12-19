@@ -1,7 +1,0 @@
-/* src/index.css */
-html {
-  color: #edffec;
-  background-color: #61e786;
-  font-size: 64px;
-  font-family: 'Indie Flower', cursive;
-}

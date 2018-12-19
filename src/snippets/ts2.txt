@@ -1,19 +1,15 @@
-type Person = {
-  firstName: string
-  lastName: string
-  age: number
+// There are two versions of a Component's setState
+
+// The simpler one, just takes an object that
+// is a subset / partial of its State
+
+type State = {
+  playerOneWins: number
+  playerTwoWins: number
 }
 
-const hello = (person: Person) => {
-  console.log('Hello', person.firstName)
-  console.log(`I cannot believe you are ${person.age} years old!`)
-}
+this.setState({ playerOneWins: 1 })
 
-const johnny = {
-  firstName: 'Johnny',
-  lastName: 'Magrippis',
-  age: '[REDACTED]'
-}
-
-// johnny is not a valid Person, as their age is not a number!
-hello(johnny)
+// React will overwrite only that specific property,
+// keeping any others as they were,
+// That is why we will not lose playerTwoScore!

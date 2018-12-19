@@ -1,0 +1,27 @@
+// src/App.tsx
+// ...
+
+export class App extends PureComponent<Props, State> {
+  state: State = {
+    playerOneWins: 0,
+    playerTwoWins: 0,
+  }
+
+  onClick = () => {
+    console.log('you clicked me!')
+  }
+
+  render() {
+    const { playerOneWins, playerTwoWins } = this.state
+    return (
+      <div>
+        <h1>Notakto</h1>
+        <Scoreboard
+          playerOneWins={playerOneWins}
+          playerTwoWins={playerTwoWins}
+        />
+        <button onClick={this.onClick}>Player 1 wins!</button>
+      </div>
+    )
+  }
+}

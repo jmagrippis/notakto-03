@@ -1,22 +1,19 @@
-// functions, aka methods, take in variables and use them
-// in whichever way makes sense to them!
-const hello = (person: Person) => {
-  console.log('Hello', person.firstName)
-  console.log(`I cannot believe you are ${person.age} years old!`)
+// The more complex one version is for when we want
+// to update our state according to its previous values
+
+// this one takes a method that receives the whole state,
+// commonly called `prevState`,
+// and returns an object that is a partial
+// of the component's state,
+// commonly called `nextState`
+
+type State = {
+  playerOneWins: number
+  playerTwoWins: number
 }
 
-// they are useful when you want to do the same thing over and over again
-// in a loop or in different parts of your code
-for (const person of dbsAttendees) {
-  sendInvoice(person)
-}
-
-// although common, methods do not have to take in variables
-reset()
-
-// but they can take an infinite amount of them
-addNumbers(a, b, c, d)
-
-// console.log is a native javascript method
-// that takes in any number of variables!
-console.log('logs to console', 'separating each parameter', 'with a space')
+this.setState(
+  (previousState: State): Partial<State> => ({
+    playerOneWins: previousState.playerOneWins + 1,
+  })
+)

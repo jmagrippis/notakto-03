@@ -1,9 +1,0 @@
-// src/Scoreboard.tsx
-import React from 'react'
-
-export const Scoreboard = () => (
-  <div>
-    <div>Player 1: 0</div>
-    <div>Player 2: 5</div>
-  </div>
-)

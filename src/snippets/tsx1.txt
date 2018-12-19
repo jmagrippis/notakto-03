@@ -4,13 +4,14 @@ import React, { PureComponent } from 'react'
 import { Scoreboard } from './Scoreboard'
 
 type Props = {}
+
 type State = {
   playerOneWins: number
   playerTwoWins: number
 }
 
 export class App extends PureComponent<Props, State> {
-  state = {
+  state: State = {
     playerOneWins: 0,
     playerTwoWins: 0,
   }
@@ -24,6 +25,7 @@ export class App extends PureComponent<Props, State> {
           playerOneWins={playerOneWins}
           playerTwoWins={playerTwoWins}
         />
+        <button>Player One wins!</button>
       </div>
     )
   }

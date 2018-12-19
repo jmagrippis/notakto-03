@@ -13,7 +13,7 @@ Go to the [starting point Code Sandbox].
 [spectacle]: https://github.com/FormidableLabs/spectacle
 [create react app]: https://facebook.github.io/create-react-app/
 [netlify]: https://www.netlify.com/
-[starting point code sandbox]: https://codesandbox.io/s/40k4y7p364
+[starting point code sandbox]: https://codesandbox.io/s/l9npx2062l
 
 ## Slide links
 

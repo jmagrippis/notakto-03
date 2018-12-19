@@ -1,0 +1,33 @@
+// src/App.tsx
+// ...
+
+export class App extends PureComponent<Props, State> {
+  // ...
+
+  winForPlayerOne = () => {
+    this.setState((prevState) => ({
+      playerOneWins: prevState.playerOneWins + 1,
+    }))
+  }
+
+  winForPlayerTwo = () => {
+    this.setState((prevState) => ({
+      playerTwoWins: prevState.playerTwoWins + 1,
+    }))
+  }
+
+  render() {
+    const { playerOneWins, playerTwoWins } = this.state
+    return (
+      <div>
+        <h1>Notakto</h1>
+        <Scoreboard
+          playerOneWins={playerOneWins}
+          playerTwoWins={playerTwoWins}
+        />
+        <button onClick={this.winForPlayerOne}>Player 1 wins!</button>
+        <button onClick={this.winForPlayerTwo}>Player 2 wins!</button>
+      </div>
+    )
+  }
+}

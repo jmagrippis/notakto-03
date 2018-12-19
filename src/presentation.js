@@ -30,7 +30,7 @@ const theme = createTheme(
   }
 )
 
-const sandboxUrl = 'https://codesandbox.io/s/40k4y7p364'
+const sandboxUrl = 'https://codesandbox.io/s/l9npx2062l'
 
 export default class Presentation extends React.PureComponent {
   render() {
@@ -50,197 +50,89 @@ export default class Presentation extends React.PureComponent {
         </Slide>
         <Slide transition={['fade']} bgColor="primary">
           <Heading size={6} textColor="secondary" caps>
-            Keywords
+            Workshop #2
           </Heading>
-          <List>
-            <ListItem>Typescript</ListItem>
-            <ListItem>Code Sandbox</ListItem>
-            <ListItem>React</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary">
-          <Heading size={6} textColor="secondary" caps>
-            Typescript
-          </Heading>
-          <List>
-            <ListItem>
-              Statically-typed transpiles-to-javascript language
-            </ListItem>
-            <ListItem>Makes your editor better at helping you</ListItem>
-            <ListItem>So hot right now</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary">
-          <Heading size={6} textColor="secondary" caps>
-            Code Sandbox
-          </Heading>
-          <List>
-            <ListItem>Powerful code editor that runs on your browser</ListItem>
-            <ListItem>
-              Imports external libraries you use, compiles your code, reloads
-              your preview
-            </ListItem>
-            <ListItem>
-              Useful for experiments and sharing code snippets
-            </ListItem>
+          <Text>
+            <ListItem>User Interaction</ListItem>
+            <ListItem>Event Handling</ListItem>
+            <ListItem>Updating State</ListItem>
             <ListItem>
               <Link href={sandboxUrl}>
                 Sandbox with the start of this project: {sandboxUrl}
               </Link>
             </ListItem>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary">
-          <Heading size={6} textColor="secondary" caps>
-            React
-          </Heading>
-          <List>
-            <ListItem>Revolutionary framework for User Interfaces</ListItem>
-            <ListItem>Has you thinking in Components</ListItem>
-            <ListItem>
-              Merges HTML, styling and javascript together on the component
-              level
-            </ListItem>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary">
-          <Heading size={6} textColor="secondary" caps>
-            Let's add some css!
-          </Heading>
-          <List>
-            <ListItem>
-              <Link href="https://coolors.co/app">
-                Coolors: generate appealing colour palettes
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link href="https://fonts.google.com/">
-                Google Fonts: publicly distributed professional fonts
-              </Link>
-            </ListItem>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            Let's add some css!
-          </Heading>
-          <CodePane
-            lang="html"
-            textSize="1.3em"
-            source={require('./snippets/css1.txt')}
-            margin="20px auto"
-            overflow="overflow"
-          />
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            Let's add some css!
-          </Heading>
-          <CodePane
-            lang="html"
-            textSize="0.85em"
-            source={require('./snippets/html1.txt')}
-            margin="20px auto"
-            overflow="overflow"
-          />
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary">
-          <Heading size={6} textColor="secondary" caps>
-            React Components
-          </Heading>
-          <List>
-            <ListItem>Class Components</ListItem>
-            <ListItem>Stateless Functional Components</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            Class Components
-          </Heading>
-          <CodePane
-            lang="javascript"
-            textSize="0.85em"
-            source={require('./snippets/jsx1.txt')}
-            margin="20px auto"
-            overflow="overflow"
-          />
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            Let's add a Scoreboard section!
-          </Heading>
-          <Appear>
-            <div>
-              <CodePane
-                lang="javascript"
-                textSize="0.85em"
-                source={require('./snippets/jsx2.txt')}
-                margin="20px auto"
-                overflow="overflow"
-              />
-            </div>
-          </Appear>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary">
-          <Heading size={6} textColor="secondary" caps>
-            Props, State and Context
-          </Heading>
-          <List>
-            <Appear>
-              <ListItem>
-                Components can be "given" data as `props`. They cannot
-                manipulate `props` directly, they just use them.
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Components can have their own `state`. They can update their own
-                state as much as they want.
-              </ListItem>
-            </Appear>
-
-            <Appear>
-              <ListItem>
-                Components can use `context`, which is like `state` on steroids.
-              </ListItem>
-            </Appear>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary">
-          <Heading size={6} textColor="secondary" caps>
-            Props, State and Context
-          </Heading>
-          <List>
-            <ListItem>Components will almost always use `props`</ListItem>
-            <ListItem>Components will sometimes have `state`</ListItem>
-            <ListItem>
-              Components will only use `context` in advanced cases
-            </ListItem>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            Let's create a Functional Component!
-          </Heading>
-          <Appear>
-            <div>
-              <CodePane
-                lang="javascript"
-                textSize="0.85em"
-                source={require('./snippets/jsx3.txt')}
-                margin="20px auto"
-                overflow="overflow"
-              />
-            </div>
-          </Appear>
-          <Text>
-            Class Components are classes, Functional Components are just
-            functions!
           </Text>
         </Slide>
+        <Slide transition={['fade']} bgColor="primary">
+          <Heading size={6} textColor="secondary" caps>
+            User Interaction: Back in my day...
+          </Heading>
+          <Appear>
+            <Image
+              margin="20px auto"
+              src={require('./images/sleepyDwarf.gif')}
+            />
+          </Appear>
+          <Text>Slow back and forth from browser to server to a new page</Text>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary">
+          <Heading size={6} textColor="secondary" caps>
+            User Interaction: Now...
+          </Heading>
+          <List>
+            <ListItem>Immediate feedback</ListItem>
+            <ListItem>
+              Optimistic updates with server work behind the scenes
+            </ListItem>
+            <ListItem>All done with the power of Javascript</ListItem>
+          </List>
+        </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="quaternary" caps>
-            Typescript interlude!
+            Let's create a Win Button!
+          </Heading>
+          <Appear>
+            <div>
+              <CodePane
+                lang="javascript"
+                textSize="0.65em"
+                source={require('./snippets/tsx1.txt')}
+                margin="20px auto"
+                overflow="overflow"
+              />
+            </div>
+          </Appear>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary">
+          <Heading size={6} textColor="secondary" caps>
+            Events
+          </Heading>
+          <List>
+            <Appear>
+              <ListItem>
+                Events happen as the user interacts with your app
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                They relate to a specific <strong>element</strong>: the same{' '}
+                <strong>type</strong> of event is dispatched when a user clicks
+                on a button, as when they click on an image, but they have
+                different <strong>targets</strong>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                They never stop happening: if the user clicks a button an
+                infinite amount of times, an infinite amount of events of that
+                type with the button as the target will be dispatched
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="quaternary" caps>
+            Handling Events
           </Heading>
           <CodePane
             lang="javascript"
@@ -252,11 +144,47 @@ export default class Presentation extends React.PureComponent {
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="quaternary" caps>
-            Typescript interlude!
+            Let's do it in React!
           </Heading>
           <CodePane
             lang="javascript"
             textSize="0.85em"
+            source={require('./snippets/tsx2.txt')}
+            margin="20px auto"
+            overflow="overflow"
+          />
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="quaternary" caps>
+            Let's define it as a class method!
+          </Heading>
+          <CodePane
+            lang="javascript"
+            textSize="0.75em"
+            source={require('./snippets/tsx3.txt')}
+            margin="20px auto"
+            overflow="overflow"
+          />
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="quaternary" caps>
+            Let's update the state!
+          </Heading>
+          <CodePane
+            lang="javascript"
+            textSize="0.75em"
+            source={require('./snippets/tsx4.txt')}
+            margin="20px auto"
+            overflow="overflow"
+          />
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="quaternary" caps>
+            how does setState work anyway?
+          </Heading>
+          <CodePane
+            lang="javascript"
+            textSize="1.1em"
             source={require('./snippets/ts2.txt')}
             margin="20px auto"
             overflow="overflow"
@@ -264,11 +192,11 @@ export default class Presentation extends React.PureComponent {
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="quaternary" caps>
-            What are functions anyway?
+            how does setState work anyway?
           </Heading>
           <CodePane
             lang="javascript"
-            textSize="0.7em"
+            textSize="1em"
             source={require('./snippets/ts3.txt')}
             margin="20px auto"
             overflow="overflow"
@@ -276,63 +204,49 @@ export default class Presentation extends React.PureComponent {
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="quaternary" caps>
-            Fat arrow syntax
+            Let's increment the wins!
           </Heading>
-          <CodePane
-            lang="javascript"
-            textSize="0.65em"
-            source={require('./snippets/ts4.txt')}
-            margin="20px auto"
-            overflow="overflow"
-          />
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            Let's use some Props!
-          </Heading>
-          <CodePane
-            lang="javascript"
-            textSize="1em"
-            source={require('./snippets/jsx4.txt')}
-            margin="20px auto"
-            overflow="overflow"
-          />
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            Let's pass some Props!
-          </Heading>
-          <CodePane
-            lang="javascript"
-            textSize="0.9em"
-            source={require('./snippets/jsx5.txt')}
-            margin="20px auto"
-            overflow="overflow"
-          />
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            Let's use some State!
-          </Heading>
-          <CodePane
-            lang="javascript"
-            textSize="0.55em"
-            source={require('./snippets/jsx6.txt')}
-            margin="20px auto"
-            overflow="overflow"
-          />
+          <Appear>
+            <div>
+              <CodePane
+                lang="javascript"
+                textSize="1em"
+                source={require('./snippets/tsx5.txt')}
+                margin="20px auto"
+                overflow="overflow"
+              />
+            </div>
+          </Appear>
         </Slide>
         <Slide transition={['fade']} bgColor="primary">
           <Heading size={6} textColor="secondary" caps>
-            User interaction
+            How would we add a player two wins button?
+          </Heading>
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="quaternary" caps>
+            Let's add a P2 wins button!
           </Heading>
           <Appear>
-            <Image
-              margin="20px auto"
-              src={require('./images/we-have-technology.gif')}
-            />
+            <div>
+              <CodePane
+                lang="javascript"
+                textSize="0.65em"
+                source={require('./snippets/tsx6.txt')}
+                margin="20px auto"
+                overflow="overflow"
+              />
+            </div>
           </Appear>
-          <Text>Change the page according to user clicks!</Text>
+        </Slide>
+        <Slide transition={['fade']} bgColor="primary">
+          <Heading size={6} textColor="secondary" caps>
+            Next time
+          </Heading>
+          <Appear>
+            <Image margin="20px auto" src={require('./images/ticTac.webp')} />
+          </Appear>
+          <Text>Let's make a grid!</Text>
         </Slide>
         <Slide transition={['fade']} bgColor="secondary" textColor="primary">
           <BlockQuote>

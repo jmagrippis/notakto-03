@@ -1,0 +1,15 @@
+// src/App.tsx
+// ...
+
+export class App extends PureComponent<Props, State> {
+  state: State = {
+    playerOneWins: 0,
+    playerTwoWins: 0,
+  }
+
+  onClick = () => {
+    this.setState({ playerOneWins: 1 })
+  }
+
+  // ...
+}

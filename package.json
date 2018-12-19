@@ -26,5 +26,8 @@
     "type": "git",
     "url": "https://github.com/jmagrippis/notakto-01"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.7.17"
+  }
 }

@@ -1,13 +1,20 @@
-// Typescript type definition
-type Person = {
-  firstName: string
-  lastName: string
-  age: number
-}
+// there is a finite amount of native events you can
+// "listen" for, events like "click" or "scroll"
 
-// method that uses the type defined above
-// to ensure it can work
-const hello = (person: Person) => {
-  console.log('Hello', person.firstName)
-  console.log(`I cannot believe you are ${person.age} years old!`)
+// here we define the element we will be adding a
+// listener to.
+const element = document.body
+// `body` pretty much means anywhere in our app!
+
+// here we are defining the method we want to call
+// whenever that event we care about happens
+const onClick = () => {
+  console.log('you clicked me!')
 }
+// as usual, you can name it anything,
+// but descriptive names are great!
+
+// finally, we are specifying that whenever
+// a "click" happens on the body
+// we want the above method above to run.
+element.addEventListener('click', onClick)
