@@ -1,0 +1,13 @@
+// Typescript type definition
+type Person = {
+  firstName: string
+  lastName: string
+  age: number
+}
+
+// method that uses the type defined above
+// to ensure it can work
+const hello = (person: Person) => {
+  console.log('Hello', person.firstName)
+  console.log(`I cannot believe you are ${person.age} years old!`)
+}

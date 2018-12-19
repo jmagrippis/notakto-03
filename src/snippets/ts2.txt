@@ -1,0 +1,19 @@
+type Person = {
+  firstName: string
+  lastName: string
+  age: number
+}
+
+const hello = (person: Person) => {
+  console.log('Hello', person.firstName)
+  console.log(`I cannot believe you are ${person.age} years old!`)
+}
+
+const johnny = {
+  firstName: 'Johnny',
+  lastName: 'Magrippis',
+  age: '[REDACTED]'
+}
+
+// johnny is not a valid Person, as their age is not a number!
+hello(johnny)

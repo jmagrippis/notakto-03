@@ -1,0 +1,30 @@
+// src/App.tsx
+import React, { PureComponent } from 'react'
+
+import { Scoreboard } from './Scoreboard'
+
+type Props = {}
+type State = {
+  playerOneWins: number
+  playerTwoWins: number
+}
+
+export class App extends PureComponent<Props, State> {
+  state = {
+    playerOneWins: 0,
+    playerTwoWins: 0,
+  }
+
+  render() {
+    const { playerOneWins, playerTwoWins } = this.state
+    return (
+      <div>
+        <h1>Notakto</h1>
+        <Scoreboard
+          playerOneWins={playerOneWins}
+          playerTwoWins={playerTwoWins}
+        />
+      </div>
+    )
+  }
+}

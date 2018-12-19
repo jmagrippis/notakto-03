@@ -1,0 +1,25 @@
+// overly technical trivia alert:
+// in old-school javascript you'd declare methods like this
+function add(a: number, b: number): number {
+  return a + b
+}
+
+// if you wanted your method not to be hoisted, you would
+// have to assign an anonymous method to a variable
+const add = function (a: number, b: number): number {
+  return a + b
+}
+
+// in modern javascript you have the fat arrow syntax,
+// which binds the context / `this` to what you'd expect
+// from other programming languages
+const add = (a: number, b: number): number => {
+  return a + b
+}
+
+// With fat arrow methods, you may not use the curlies
+// if all you want to do is immediately return something
+const add = (a: number, b: number): number => a + b
+
+// what even is "hoisting"?! What is `this`? Doesn't really matter!
+// Take the above as the most common way to define Functional Components!
