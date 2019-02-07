@@ -1,0 +1,19 @@
+// src/App.tsx
+
+export class App extends PureComponent<Props, State> {
+  // ...
+
+  checkCell = (event: React.MouseEvent<HTMLInputElement>) => {
+    const { gridIndex, cellIndex } = event.currentTarget.dataset
+
+    this.setState(({ grids }) => ({
+      grids: grids.map((grid, i) =>
+        i !== parseInt(gridIndex)
+          ? grid
+          : grid.map((cell, j) => (j !== parseInt(cellIndex) ? cell : 'x'))
+      ),
+    }))
+  }
+
+  // ...
+}

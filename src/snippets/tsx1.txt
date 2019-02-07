@@ -1,32 +1,16 @@
-// src/App.tsx
-import React, { PureComponent } from 'react'
+import React from 'react'
+import styled from 'styled-components'
 
-import { Scoreboard } from './Scoreboard'
+const Container = styled.div`
+  font-size: 32px;
+`
 
-type Props = {}
+const Strong = styled.strong`
+  font-weight: 500;
+`
 
-type State = {
-  playerOneWins: number
-  playerTwoWins: number
-}
-
-export class App extends PureComponent<Props, State> {
-  state: State = {
-    playerOneWins: 0,
-    playerTwoWins: 0,
-  }
-
-  render() {
-    const { playerOneWins, playerTwoWins } = this.state
-    return (
-      <div>
-        <h1>Notakto</h1>
-        <Scoreboard
-          playerOneWins={playerOneWins}
-          playerTwoWins={playerTwoWins}
-        />
-        <button>Player One wins!</button>
-      </div>
-    )
-  }
-}
+const Cell = styled.span`
+  background-color: purple;
+  color: #aaaaaa;
+  text-decoration: underline;
+`

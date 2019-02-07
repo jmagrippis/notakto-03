@@ -30,7 +30,7 @@ const theme = createTheme(
   }
 )
 
-const sandboxUrl = 'https://codesandbox.io/s/l9npx2062l'
+const sandboxUrl = 'https://codesandbox.io/s/olp7365nmq'
 
 export default class Presentation extends React.PureComponent {
   render() {
@@ -50,12 +50,11 @@ export default class Presentation extends React.PureComponent {
         </Slide>
         <Slide transition={['fade']} bgColor="primary">
           <Heading size={6} textColor="secondary" caps>
-            Workshop #2
+            Workshop #3
           </Heading>
           <Text>
-            <ListItem>User Interaction</ListItem>
-            <ListItem>Event Handling</ListItem>
-            <ListItem>Updating State</ListItem>
+            <ListItem>Styled Components</ListItem>
+            <ListItem>Passing methods to update state</ListItem>
             <ListItem>
               <Link href={sandboxUrl}>
                 Sandbox with the start of this project: {sandboxUrl}
@@ -65,38 +64,55 @@ export default class Presentation extends React.PureComponent {
         </Slide>
         <Slide transition={['fade']} bgColor="primary">
           <Heading size={6} textColor="secondary" caps>
-            User Interaction: Back in my day...
+            Defining Style
           </Heading>
+          <Image margin="20px auto" src={require('./images/1style.webp')} />
+
           <Appear>
-            <Image
-              margin="20px auto"
-              src={require('./images/sleepyDwarf.gif')}
-            />
+            <Text>
+              With{' '}
+              <Link href="https://www.styled-components.com/">
+                Styled Components
+              </Link>
+              !
+            </Text>
           </Appear>
-          <Text>Slow back and forth from browser to server to a new page</Text>
         </Slide>
         <Slide transition={['fade']} bgColor="primary">
           <Heading size={6} textColor="secondary" caps>
-            User Interaction: Now...
+            Styled Components
           </Heading>
           <List>
-            <ListItem>Immediate feedback</ListItem>
             <ListItem>
-              Optimistic updates with server work behind the scenes
+              Returns a React component of the element you give it...
             </ListItem>
-            <ListItem>All done with the power of Javascript</ListItem>
+            <ListItem>
+              ...with the styles you specify with css syntax applied to it
+            </ListItem>
           </List>
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="quaternary" caps>
-            Let's create a Win Button!
+            Styled Components
+          </Heading>
+          <CodePane
+            lang="javascript"
+            textSize="0.7em"
+            source={require('./snippets/tsx1.txt')}
+            margin="20px auto"
+            overflow="overflow"
+          />
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="quaternary" caps>
+            Let's make our scoreboard smaller!
           </Heading>
           <Appear>
             <div>
               <CodePane
                 lang="javascript"
                 textSize="0.65em"
-                source={require('./snippets/tsx1.txt')}
+                source={require('./snippets/tsx2.txt')}
                 margin="20px auto"
                 overflow="overflow"
               />
@@ -105,62 +121,38 @@ export default class Presentation extends React.PureComponent {
         </Slide>
         <Slide transition={['fade']} bgColor="primary">
           <Heading size={6} textColor="secondary" caps>
-            Events
+            Notakto: The spec
           </Heading>
           <List>
             <Appear>
+              <ListItem>3 by 3 grid: 9 cells!</ListItem>
+            </Appear>
+            <Appear>
               <ListItem>
-                Events happen as the user interacts with your app
+                Each cell is either empty or has an <strong>X</strong>
               </ListItem>
             </Appear>
             <Appear>
               <ListItem>
-                They relate to a specific <strong>element</strong>: the same{' '}
-                <strong>type</strong> of event is dispatched when a user clicks
-                on a button, as when they click on an image, but they have
-                different <strong>targets</strong>
+                On a player's turn, they have to put an <strong>X</strong> on an
+                empty cell
               </ListItem>
             </Appear>
             <Appear>
               <ListItem>
-                They never stop happening: if the user clicks a button an
-                infinite amount of times, an infinite amount of events of that
-                type with the button as the target will be dispatched
+                The player that completes a set of three in a row (vertically,
+                horizontally, or diagonally) <strong>loses</strong>
               </ListItem>
             </Appear>
           </List>
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="quaternary" caps>
-            Handling Events
+            Let's make a Grid!
           </Heading>
           <CodePane
             lang="javascript"
             textSize="1em"
-            source={require('./snippets/ts1.txt')}
-            margin="20px auto"
-            overflow="overflow"
-          />
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            Let's do it in React!
-          </Heading>
-          <CodePane
-            lang="javascript"
-            textSize="0.85em"
-            source={require('./snippets/tsx2.txt')}
-            margin="20px auto"
-            overflow="overflow"
-          />
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            Let's define it as a class method!
-          </Heading>
-          <CodePane
-            lang="javascript"
-            textSize="0.75em"
             source={require('./snippets/tsx3.txt')}
             margin="20px auto"
             overflow="overflow"
@@ -168,11 +160,11 @@ export default class Presentation extends React.PureComponent {
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="quaternary" caps>
-            Let's update the state!
+            Let's make a Grid!
           </Heading>
           <CodePane
             lang="javascript"
-            textSize="0.75em"
+            textSize="0.8em"
             source={require('./snippets/tsx4.txt')}
             margin="20px auto"
             overflow="overflow"
@@ -180,73 +172,110 @@ export default class Presentation extends React.PureComponent {
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="quaternary" caps>
-            how does setState work anyway?
-          </Heading>
-          <CodePane
-            lang="javascript"
-            textSize="1.1em"
-            source={require('./snippets/ts2.txt')}
-            margin="20px auto"
-            overflow="overflow"
-          />
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            how does setState work anyway?
-          </Heading>
-          <CodePane
-            lang="javascript"
-            textSize="1em"
-            source={require('./snippets/ts3.txt')}
-            margin="20px auto"
-            overflow="overflow"
-          />
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="quaternary" caps>
-            Let's increment the wins!
+            Let's render some Cells!
           </Heading>
           <Appear>
-            <div>
-              <CodePane
-                lang="javascript"
-                textSize="1em"
-                source={require('./snippets/tsx5.txt')}
-                margin="20px auto"
-                overflow="overflow"
-              />
-            </div>
+            <CodePane
+              lang="javascript"
+              textSize="0.6em"
+              source={require('./snippets/tsx5.txt')}
+              margin="20px auto"
+              overflow="overflow"
+            />
+          </Appear>
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="quaternary" caps>
+            Let's render the given cells!
+          </Heading>
+          <Appear>
+            <CodePane
+              lang="javascript"
+              textSize="0.8em"
+              source={require('./snippets/tsx6.txt')}
+              margin="20px auto"
+              overflow="overflow"
+            />
+          </Appear>
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="quaternary" caps>
+            Let's give our grid some cells!
+          </Heading>
+          <Appear>
+            <CodePane
+              lang="javascript"
+              textSize="0.8em"
+              source={require('./snippets/tsx7.txt')}
+              margin="20px auto"
+              overflow="overflow"
+            />
+          </Appear>
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="quaternary" caps>
+            Let's keep the grids in the state!
+          </Heading>
+          <Appear>
+            <CodePane
+              lang="javascript"
+              textSize="0.8em"
+              source={require('./snippets/tsx8.txt')}
+              margin="20px auto"
+              overflow="overflow"
+            />
           </Appear>
         </Slide>
         <Slide transition={['fade']} bgColor="primary">
           <Heading size={6} textColor="secondary" caps>
-            How would we add a player two wins button?
+            How do we update that state?
           </Heading>
+          <Appear>
+            <Image
+              margin="20px auto"
+              src={require('./images/8updateState.gif')}
+            />
+          </Appear>
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="quaternary" caps>
-            Let's add a P2 wins button!
+            datasets as a way to pass data!
           </Heading>
           <Appear>
-            <div>
-              <CodePane
-                lang="javascript"
-                textSize="0.65em"
-                source={require('./snippets/tsx6.txt')}
-                margin="20px auto"
-                overflow="overflow"
-              />
-            </div>
+            <CodePane
+              lang="javascript"
+              textSize="0.7em"
+              source={require('./snippets/tsx9.txt')}
+              margin="20px auto"
+              overflow="overflow"
+            />
           </Appear>
         </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="quaternary" caps>
+            datasets as a way to pass data!
+          </Heading>
+          <Appear>
+            <CodePane
+              lang="javascript"
+              textSize="0.7em"
+              source={require('./snippets/tsx10.txt')}
+              margin="20px auto"
+              overflow="overflow"
+            />
+          </Appear>
+        </Slide>
+
         <Slide transition={['fade']} bgColor="primary">
           <Heading size={6} textColor="secondary" caps>
             Next time
           </Heading>
           <Appear>
-            <Image margin="20px auto" src={require('./images/ticTac.webp')} />
+            <Image margin="20px auto" src={require('./images/9win.gif')} />
           </Appear>
-          <Text>Let's make a grid!</Text>
+          <Appear>
+            <Text>WIN</Text>
+          </Appear>
         </Slide>
         <Slide transition={['fade']} bgColor="secondary" textColor="primary">
           <BlockQuote>

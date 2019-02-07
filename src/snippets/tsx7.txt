@@ -1,5 +1,4 @@
 // src/App.tsx
-import { Grid } from './Grid'
 // ...
 
 export class App extends PureComponent<Props, State> {
@@ -15,7 +14,7 @@ export class App extends PureComponent<Props, State> {
         />
         <button onClick={this.winForPlayerOne}>Player 1 wins!</button>
         <button onClick={this.winForPlayerTwo}>Player 2 wins!</button>
-        <Grid />
+        <Grid cells={['x', 'x', 'x', '', 'x', '', '', '', '']} />
       </div>
     )
   }

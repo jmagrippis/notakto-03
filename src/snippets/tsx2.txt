@@ -1,23 +1,21 @@
-// src/App.tsx
+// src/Scoreboard.tsx
 // ...
 
-const onClick = () => {
-  console.log('you clicked me!')
+import React from 'react'
+import styled from 'styled-components'
+
+const Container = styled.div`
+  font-size: 32px;
+`
+
+type Props = {
+  playerOneWins: number
+  playerTwoWins: number
 }
 
-export class App extends PureComponent<Props, State> {
-  // ...
-  render() {
-    const { playerOneWins, playerTwoWins } = this.state
-    return (
-      <div>
-        <h1>Notakto</h1>
-        <Scoreboard
-          playerOneWins={playerOneWins}
-          playerTwoWins={playerTwoWins}
-        />
-        <button onClick={onClick}>Player One wins!</button>
-      </div>
-    )
-  }
-}
+export const Scoreboard = (props: Props) => (
+  <Container>
+    <div>Player 1: {props.playerOneWins}</div>
+    <div>Player 2: {props.playerTwoWins}</div>
+  </Container>
+)

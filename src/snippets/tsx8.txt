@@ -1,0 +1,23 @@
+// src/App.tsx
+// ...
+
+type State = {
+  playerOneWins: number
+  playerTwoWins: number
+  grids: string[][]
+}
+
+export class App extends PureComponent<Props, State> {
+  // ...
+  render() {
+    const { playerOneWins, playerTwoWins, grids } = this.state
+    return (
+      <div>
+        {/* ... */}
+        {grids.map((cells, i) => (
+          <Grid cells={cells} />
+        ))}
+      </div>
+    )
+  }
+}

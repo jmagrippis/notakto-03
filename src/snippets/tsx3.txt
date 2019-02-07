@@ -1,27 +1,8 @@
-// src/App.tsx
+// src/Grid.tsx
 // ...
 
-export class App extends PureComponent<Props, State> {
-  state: State = {
-    playerOneWins: 0,
-    playerTwoWins: 0,
-  }
+import React from 'react'
 
-  onClick = () => {
-    console.log('you clicked me!')
-  }
+type Props = {}
 
-  render() {
-    const { playerOneWins, playerTwoWins } = this.state
-    return (
-      <div>
-        <h1>Notakto</h1>
-        <Scoreboard
-          playerOneWins={playerOneWins}
-          playerTwoWins={playerTwoWins}
-        />
-        <button onClick={this.onClick}>Player 1 wins!</button>
-      </div>
-    )
-  }
-}
+export const Grid = () => <div>I am a grid!</div>

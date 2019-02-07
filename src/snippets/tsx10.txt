@@ -1,0 +1,18 @@
+// src/Grid.tsx
+import React from 'react'
+// ...
+
+type Props = {
+  cells: string[]
+  gridIndex: number
+}
+
+export const Grid = ({ cells, gridIndex }: Props) => (
+  <Container>
+    {cells.map((content, i) => (
+      <Cell key={i} data-grid-index={gridIndex} data-cell-index={i}>
+        {content}
+      </Cell>
+    ))}
+  </Container>
+)
